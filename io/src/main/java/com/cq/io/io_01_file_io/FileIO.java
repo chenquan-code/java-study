@@ -18,28 +18,37 @@ public class FileIO {
 
     public static void main(String[] args) throws Exception {
 
-        switch(args[0]){
+        switch (args[0]) {
             case "0":
                 baseFileIO();
                 break;
             case "1":
-
+                bufferedFileIO();
+                break;
         }
 
     }
 
+    /**
+     *  TODO 测试 FileOutputStream 写入的速度
+     * @throws Exception
+     */
     private static void baseFileIO() throws Exception {
         File file = new File(PATH);
         FileOutputStream out = new FileOutputStream(file);
-        while (true){
+        while (true) {
             out.write(DATA);
         }
     }
 
+    /**
+     * TODO 测试 BufferedOutputStream 写入速度
+     * @throws Exception
+     */
     private static void bufferedFileIO() throws Exception {
         File file = new File(PATH);
         BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(file));
-        while (true){
+        while (true) {
             out.write(DATA);
         }
     }
