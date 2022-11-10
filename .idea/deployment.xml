@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="linux01" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="linux01">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/study/java-study" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/home/study/java-study/jvm" local="$PROJECT_DIR$/jvm" web="/" />
+            <mapping deploy="/home/study/java-study/io" local="$PROJECT_DIR$/io" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
