@@ -5,9 +5,7 @@
       <paths name="linux01">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/study/java-study" local="$PROJECT_DIR$" web="/" />
-            <mapping deploy="/home/study/java-study/jvm" local="$PROJECT_DIR$/jvm" web="/" />
-            <mapping deploy="/home/study/java-study/io" local="$PROJECT_DIR$/io" web="/" />
+            <mapping deploy="/home/java-study/io" local="$PROJECT_DIR$/io/src/main/java/com/cq/io" web="/" />
           </mappings>
         </serverdata>
       </paths>

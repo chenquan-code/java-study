@@ -9,10 +9,10 @@ import java.net.Socket;
 /**
  * @Author chenquan
  * @Date 2022-11-10 23:44
- * @Description: TODO 测试BIO的特性
+ * @Description: TODO 测试 Socket BIO 的特性
  * 1. 阻塞：accept是阻塞执行的，一直到有客户端连接进来才会进行下一步
  * 2. 这个模型一个线程只能服务一个socket
- * 2. Linux启动并追踪程序：strace -ff -o out java SocketBIO
+ * 2. Linux启动并追踪程序：javac SocketBIO.java && strace -ff -o out java SocketBIO
  * @Version: 1.0
  **/
 
