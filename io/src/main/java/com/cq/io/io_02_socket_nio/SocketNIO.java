@@ -36,7 +36,7 @@ public class SocketNIO {
             // TODO 由于上面设置了非阻塞模式，所以这里不会阻塞，没有客户端请求就返回 null
             SocketChannel client = server.accept();
             if (client == null){
-                System.out.println("本次循环没有客户端连接...");
+                System.out.println("等待客户端连接...");
                 Thread.sleep(1000);
             }else {
                 // TODO 设置读取也非阻塞，这样服务端线程就不会一直卡在这里等客户端发送内容了
