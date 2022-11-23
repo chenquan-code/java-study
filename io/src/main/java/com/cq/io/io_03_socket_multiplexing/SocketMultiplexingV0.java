@@ -18,8 +18,9 @@ import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 
-public class NIO {
+public class SocketMultiplexingV0 {
     public static final int SIZE = 1024;
+
     void start(int port) {
         ByteBuffer buffer = ByteBuffer.allocate(SIZE);
         try {
@@ -51,12 +52,11 @@ public class NIO {
                             int count = sc.read(buffer);
                             System.out.println("Read byte:" + count);
                             //log(buffer);
-                            if(count==SIZE){
+                            if (count == SIZE) {
                                 //如果count等于缓冲区大小，则说明此条消息没读完
                                 //需要设计复杂点的消息结构
 
-                            }else
-                            if (count == -1) {
+                            } else if (count == -1) {
                                 //当客户端断开连接时会触发read事件，并且可以读到-1，这时关闭通道
                                 sc.close();
                                 key.cancel();
@@ -99,15 +99,17 @@ public class NIO {
             e.printStackTrace();
         }
     }
-    public static void log(ByteBuffer buf){
+
+    public static void log(ByteBuffer buf) {
         try {
-            System.out.println(new String(buf.array(),0,buf.limit(),"utf8"));
+            System.out.println(new String(buf.array(), 0, buf.limit(), "utf8"));
         } catch (UnsupportedEncodingException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
+
     public static void main(String[] args) {
-        new NIO().start(9090);
+        new SocketMultiplexingV0().start(9090);
     }
 }

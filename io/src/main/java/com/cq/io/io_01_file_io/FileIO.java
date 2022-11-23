@@ -16,11 +16,11 @@ public class FileIO {
 
     public static void main(String[] args) throws Exception {
 
-        if (args.length < 1){
+        if (args.length < 1) {
             System.out.println("请输入参数！");
             System.exit(0);
         }
-        if(args.length == 2){
+        if (args.length == 2) {
             PATH = args[1];
         }
 
