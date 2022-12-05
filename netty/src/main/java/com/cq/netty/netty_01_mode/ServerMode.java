@@ -20,7 +20,7 @@ import java.net.InetSocketAddress;
 public class ServerMode {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("【服务端】启动...");
-        NioEventLoopGroup group = new NioEventLoopGroup(1);
+        NioEventLoopGroup group = new NioEventLoopGroup(2);
         NioServerSocketChannel server = new NioServerSocketChannel();
 
         group.register(server);
@@ -28,6 +28,7 @@ public class ServerMode {
         ChannelPipeline pipeline = server.pipeline();
 
         // TODO 为什么需要一个MyInitChannel中转，因为不中转的话在多个线程的情况下会报错
+//        pipeline.addLast(new MyAcceptHandler(group, new MyInHandler()));
         pipeline.addLast(new MyAcceptHandler(group, new MyInitChannel()));
 
         ChannelFuture bind = server.bind(new InetSocketAddress("localhost", 9090));

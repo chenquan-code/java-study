@@ -18,7 +18,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * @Author chenquan
  * @Date 2022-11-24 21:50
- * @Description: TODO
+ * @Description: TODO 使用 bootstrap 创建客户端
  * @Version: 1.0
  **/
 
@@ -30,9 +30,9 @@ public class NettyClient {
         Bootstrap bootstrap = new Bootstrap();
         ChannelFuture connect = bootstrap.group(group)
                 .channel(NioSocketChannel.class)
-                .handler(new ChannelInitializer<SocketChannel>() {
+                .handler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
-                    protected void initChannel(SocketChannel socketChannel) throws Exception {
+                    protected void initChannel(NioSocketChannel socketChannel) throws Exception {
                         ChannelPipeline pipeline = socketChannel.pipeline();
                         pipeline.addLast(new MyInHandler());
                     }

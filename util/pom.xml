@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>netty</artifactId>
+    <artifactId>util</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -17,21 +17,11 @@
     </properties>
 
     <dependencies>
-        <!-- netty  -->
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>4.1.51.Final</version>
-        </dependency>
         <!-- junit  -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
-            <scope>test</scope>
         </dependency>
-
     </dependencies>
-
-
 </project>

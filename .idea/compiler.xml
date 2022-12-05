@@ -7,6 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jvm" />
+        <module name="design-pattern" />
+        <module name="juc" />
+        <module name="util" />
         <module name="io" />
         <module name="netty" />
       </profile>

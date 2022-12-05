@@ -12,6 +12,9 @@
         <module>io</module>
         <module>jvm</module>
         <module>netty</module>
+        <module>util</module>
+        <module>design-pattern</module>
+        <module>juc</module>
     </modules>
 
     <properties>

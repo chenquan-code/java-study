@@ -22,7 +22,7 @@ public class ClientMode {
     public static void main(String[] args) throws Exception {
 
         System.out.println("【客户端】启动...");
-        // TODO NioEventLoopGroup 底层维护了一组 Selector （多路复用器）
+        // TODO NioEventLoopGroup 线程组，底层维护了一组 Selector （多路复用器）: EventExecutor[] children
         NioEventLoopGroup group = new NioEventLoopGroup(1);
         // TODO Netty 对 Java NIO SocketChannel 的包装
         NioSocketChannel client = new NioSocketChannel();
