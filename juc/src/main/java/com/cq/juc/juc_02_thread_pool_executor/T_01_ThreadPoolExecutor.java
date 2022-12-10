@@ -1,4 +1,4 @@
-package com.cq.juc.thread_pool_executor;
+package com.cq.juc.juc_02_thread_pool_executor;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -25,38 +25,6 @@ public class T_01_ThreadPoolExecutor {
         pool.execute(new Say("hello", 10));
         pool.execute(new Say("world", 10));
         pool.execute(new Say("hi", 10));
-
-
     }
 
-}
-
-class Say implements Runnable {
-    String text;
-    Integer count;
-
-    public Say() {
-    }
-
-    ;
-
-    public Say(String text, Integer count) {
-        this.text = text;
-        this.count = count;
-    }
-
-    ;
-
-    @Override
-    public void run() {
-        while (count > 0) {
-            System.out.println(Thread.currentThread() + "：" + text);
-            try {
-                Thread.sleep(1000);
-                count--;
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }

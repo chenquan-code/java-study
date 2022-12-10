@@ -8,10 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jvm" />
         <module name="design-pattern" />
-        <module name="juc" />
         <module name="util" />
         <module name="io" />
+        <module name="juc" />
+        <module name="jdbc" />
         <module name="netty" />
+        <module name="base" />
       </profile>
     </annotationProcessing>
   </component>
